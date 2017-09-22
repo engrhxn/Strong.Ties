@@ -16,7 +16,7 @@ public class AdhocTicket implements IAdhocTicket {
 	
 	public AdhocTicket(String carparkId, int ticketNo, String barcode) {
 
-   
+
 	
 	//TDO Implement constructor
         String carparkId=1;
@@ -63,6 +63,7 @@ public class AdhocTicket implements IAdhocTicket {
 	@Override
 	public long getEntryDateTime() {
 		// TODO Auto-generated method stub
+		return entryDatetime; // returns date time of system
 		return 0;
 	}
 
@@ -78,12 +79,21 @@ public class AdhocTicket implements IAdhocTicket {
 	@Override
 	public void pay(long dateTime, float charge) {
 		// TODO Auto-generated method stub
+		this.dateTime= LocalDateTime.now();//
+		this.charge=charge;
+		
 		
 	}
 
 
 	@Override
 	public long getPaidDateTime() {
+		
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		private static final DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		 Date date = new Date();
+		 System.out.println(sdf.format(date));
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -132,7 +142,7 @@ public class AdhocTicket implements IAdhocTicket {
 
 	@Override
 	public void exit(long dateTime) {
-		//DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		private static final DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
          private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 
@@ -144,12 +154,14 @@ public class AdhocTicket implements IAdhocTicket {
         Calendar cal = Calendar.getInstance();
         System.out.println(sdf.format(cal.getTime()));
 
-       /* LocalDateTime now = LocalDateTime.now();
+       LocalDateTime now = LocalDateTime.now();
         System.out.println(dtf.format(now));
+
         LocalDate localDate = LocalDate.now();
         System.out.println(DateTimeFormatter.ofPattern("yyy/MM/dd").format(localDate));
+
 		// TODO Auto-generated method stub */
-		// TODO Auto-generated method stub */
+		// TODO Auto-generated method stub 
 		
 	}
 
@@ -167,7 +179,14 @@ public class AdhocTicket implements IAdhocTicket {
 	@Override
 	public boolean hasExited() {
 		// TODO Auto-generated method stub
-		if()
+		if(pay=='true')
+		{
+			System.out.println("Exit successfully");
+			
+		}
+		
+		else
+		
 		return false;
 	}
 
