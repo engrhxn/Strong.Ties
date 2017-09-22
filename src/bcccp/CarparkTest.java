@@ -1,5 +1,5 @@
 
-@After
-	public void tearDown() throws Exception {
-	}	
-
+@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
