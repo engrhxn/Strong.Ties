@@ -14,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SeasonTicketDAOTest {
 
     @Test
+
     void SeasonTicketDAO(){
         //Creating Object
         IUsageRecordFactory factory = new IUsageRecordFactory() {
