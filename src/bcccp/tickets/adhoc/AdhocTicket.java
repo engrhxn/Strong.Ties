@@ -1,9 +1,5 @@
 package bcccp.tickets.adhoc;
-/*
-Student Name: Hassan Ali
-Student ID: 11636525
-Assignment 2
-*/
+
 import java.util.Date;
 
 public class AdhocTicket implements IAdhocTicket {
@@ -16,107 +12,162 @@ public class AdhocTicket implements IAdhocTicket {
 	private float charge;
 	private String barcode;
 
-        // Defining an enum
-        private enum TICKET_STATE {Ticket_Issued, Car_Parked, Ticket_Paid, Car_Exited}
 	
-        //Defining an enum variable
-        private TICKET_STATE ticket_State;
-
-	//Overrided constructor 
-
+	
 	public AdhocTicket(String carparkId, int ticketNo, String barcode) {
-        this.carparkId = carparkId;
-        	this.ticketNo = ticketNo;
-        	this.barcode = barcode;
-		this.ticket_State = TICKET_STATE.Ticket_Issued;
+
+   
+	
+	//TDO Implement constructor
+        String carparkId=1;
+		int ticketNo=12345;
+		String barcode='abc1234';
+
+
+
+
 	}
 
 
 	@Override
 	public int getTicketNo() {
-		return this.ticketNo;
+		// TODO Auto-generated method stub
+		this.ticketNo=ticketNo;
+		return 0;
 	}
 
 
 	@Override
 	public String getBarcode() {
-		return this.barcode;
+		// TODO Auto-generated method stub
+		this.barcode=barcode;
+		return null;
 	}
 
 
 	@Override
 	public String getCarparkId() {
-		return this.carparkId;
+		// TODO Auto-generated method stub
+		this.carparkIdid=id;
+		return null;
 	}
 
 
 	@Override
 	public void enter(long dateTime) {
-		this.entryDateTime = dateTime;
+		// TODO Auto-generated method stub
 		
 	}
 
 
 	@Override
 	public long getEntryDateTime() {
-		Date d = new Date();
-		return d.getTime();
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-        //This overrided method will return the status
+
 	@Override
 	public boolean isCurrent() {
-		return entryDateTime > 0 && paidDateTime == 0;
+		
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 
 	@Override
 	public void pay(long dateTime, float charge) {
-		paidDateTime = dateTime;
-
-    		this.charge = charge;
+		// TODO Auto-generated method stub
 		
 	}
 
-	//This overrided method will return the time and paid date
 
 	@Override
 	public long getPaidDateTime() {
-        return this.paidDateTime;
-		
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	//This overrided method will return the paid status
 
 	@Override
 	public boolean isPaid() {
-		return paidDateTime > 0;
+		
+		if(isPaid='true')
+		{ // success message to user 
+			System.out.println("Ticket Paid Successfully");
+			
+		}
+		else 
+		{
+			//output message to user 
+			Syestem.out.println("Payment not proceed successfully");
+		}
+		// TODO Auto-generated method stub
+		return false;
 	}
 
-	//This overrided method will set the exit date and time
+
 	@Override
 	public float getCharge() {
-		return this.charge;
+		// TODO Auto-generated method stub
+		float ticket = (float) 12.4;
+		float calcTicket=ticket;
+		if (paidticket<calcTicket);
+		
+		{
+			
+			System.out.pritnln("Please paid Full amount // See Controler Room");
+			
+			
+		}
+		
+		else 
+		{
+			System.out.println("Thanks for using Prking .See you next time");
+			
+		}
+		return 0;
 	}
 
-	//This overrided method will set the exit date and time
 
 	@Override
 	public void exit(long dateTime) {
+		//DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		private static final DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+         private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+
+
+        Date date = new Date();
+        System.out.println(sdf.format(date));
+
+        Calendar cal = Calendar.getInstance();
+        System.out.println(sdf.format(cal.getTime()));
+
+       /* LocalDateTime now = LocalDateTime.now();
+        System.out.println(dtf.format(now));
+        LocalDate localDate = LocalDate.now();
+        System.out.println(DateTimeFormatter.ofPattern("yyy/MM/dd").format(localDate));
+		// TODO Auto-generated method stub */
+		// TODO Auto-generated method stub */
 		
-		exitDateTime = dateTime;
 	}
 
-        //This overrided method will return the exit date and time
+
 	@Override
 	public long getExitDateTime() {
-                return this.exitDateTime;
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Calendar cal = Calendar.getInstance();
+        System.out.println(dateFormat.format(cal.getTime()));
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	//This overrided method will return the status of exit
+
 	@Override
 	public boolean hasExited() {
-		return exitDateTime > 0;
+		// TODO Auto-generated method stub
+		if()
+		return false;
 	}
 
 	
