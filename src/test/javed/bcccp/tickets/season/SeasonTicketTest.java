@@ -15,4 +15,13 @@ class SeasonTicketTest {
         assertEquals("S11111", id);
     }
 
+   @Test
+    void getCarparkId(){
+        //Creating Object
+        SeasonTicket seasonTicket = new SeasonTicket("S11111", "NobalPark111", 1111, 2222);
+        //Creating id as string variable
+        String id = seasonTicket.getCarparkId();
+        //Using assertEqual method to check if the return value is good or not
+        assertEquals("NobalPark111", id);
+    }
 }
