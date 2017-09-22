@@ -14,3 +14,10 @@ public class ICarparkObserverTest {
 	public void tearDown() throws Exception {
 	}
 
+@Test
+	public void testNotifyCarparkEvent() {
+		fail("Not yet implemented");
+	}
+
+}
+
