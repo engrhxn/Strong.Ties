@@ -52,7 +52,12 @@ public class AdhocTicket implements IAdhocTicket {
 		return null;
 	}
 
-
+public void enter(long dateTime) {
+ 		
+-		Date date = new Date();
++		Date date = new Date(); //Date class object
+         System.out.println(sdf.format(date));
+		 
 	@Override
 	public void enter(long dateTime) {
 		// TODO Auto-generated method stub
