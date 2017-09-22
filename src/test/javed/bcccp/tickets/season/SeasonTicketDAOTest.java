@@ -14,7 +14,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class SeasonTicketDAOTest {
 
     @Test
-
     void SeasonTicketDAO(){
         //Creating Object
         IUsageRecordFactory factory = new IUsageRecordFactory() {
@@ -146,5 +145,20 @@ class SeasonTicketDAOTest {
         };
         SeasonTicketDAO seasonTicketDAO = new SeasonTicketDAO(factory);
         seasonTicketDAO.deregisterTicket(seasonTicket);
+    }
+
+    @Test
+    void findTicketById(){
+        // Creating Object
+        ISeasonTicket iSeasonTicket;
+        IUsageRecordFactory factory = new IUsageRecordFactory() {
+            @Override
+            public IUsageRecord make(String ticketId, long startDateTime) {
+                return null;
+            }
+        };
+        SeasonTicketDAO seasonTicketDAO = new SeasonTicketDAO(factory);
+        iSeasonTicket = seasonTicketDAO.findTicketById("736366336363");
+        assertEquals(null, iSeasonTicket);
     }
 }
