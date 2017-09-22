@@ -5,9 +5,4 @@
  // TODO
 	}
 
-	private String getDeregister() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	
