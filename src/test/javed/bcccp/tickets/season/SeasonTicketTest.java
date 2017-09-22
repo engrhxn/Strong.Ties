@@ -24,4 +24,14 @@ class SeasonTicketTest {
         //Using assertEqual method to check if the return value is good or not
         assertEquals("NobalPark111", id);
     }
+
+@Test
+    void getStartValidPeriod(){
+        //Creating Object
+        SeasonTicket seasonTicket = new SeasonTicket("S11111", "NobalPark111", 1111, 2222);
+        //Creating start as long variable
+        long start = seasonTicket.getStartValidPeriod();
+        //Using assertEqual method to check if the return value is good or not
+        assertEquals("1111", start);
+    }
 }
