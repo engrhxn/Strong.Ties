@@ -83,13 +83,15 @@ public class AdhocTicket implements IAdhocTicket {
 	}
 
 
-	@Override
-	public long getPaidDateTime() {
-		// TODO Auto-generated method stub
-		return 0;
+	
 	}
-
-
+public long getPaidDateTime() {
++		
++		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
++		
+ 		// TODO Auto-generated method stub
+ 		return 0;
+ 	}
 	@Override
 	public boolean isPaid() {
 		
