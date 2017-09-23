@@ -26,3 +26,12 @@ class UsageRecordTest {
         //Using assertEqual method to check if the return value is good or not
         assertEquals(time, usageRecord.getStartTime());
     }
+@Test
+    void getEndTime(){
+        //Creating object
+        UsageRecord usageRecord = new UsageRecord("NobalPark1111", 1111);
+        //Creating time as long variable
+        long time = 0;
+        //Using assertEqual method to check if the return value is good or not
+        assertEquals(time, usageRecord.getEndTime());
+    }
