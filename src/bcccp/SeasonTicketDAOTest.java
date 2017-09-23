@@ -1,14 +1,6 @@
 
 
-    @Test
-    void SeasonTicketDAO(){
-        //Creating Object
-        IUsageRecordFactory factory = new IUsageRecordFactory() {
-            @Override
-            public IUsageRecord make(String ticketId, long startDateTime) {
-                return null;
-            }
-        };
+    
 
         SeasonTicketDAO seasonTicketDAO = new SeasonTicketDAO(factory);
 
